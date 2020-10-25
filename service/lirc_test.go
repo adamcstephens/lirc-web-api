@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/golang/mock/gomock"
-	"github.com/ww24/lirc-web-api/lirc"
+	"github.com/adamcstephens/lirc-web-api/lirc"
 )
 
 func TestFetchSignals(t *testing.T) {

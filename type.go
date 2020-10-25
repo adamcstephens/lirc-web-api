@@ -1,6 +1,6 @@
 package main
 
-import "github.com/ww24/lirc-web-api/service"
+import "github.com/adamcstephens/lirc-web-api/service"
 
 type status struct {
 	Status       string `json:"status"`

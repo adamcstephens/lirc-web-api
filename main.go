@@ -9,8 +9,8 @@ import (
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 	"github.com/labstack/gommon/log"
-	"github.com/ww24/lirc-web-api/config"
-	"github.com/ww24/lirc-web-api/lirc"
+	"github.com/adamcstephens/lirc-web-api/config"
+	"github.com/adamcstephens/lirc-web-api/lirc"
 )
 
 var (

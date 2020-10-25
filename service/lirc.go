@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ww24/lirc-web-api/lirc"
+	"github.com/adamcstephens/lirc-web-api/lirc"
 )
 
 var (

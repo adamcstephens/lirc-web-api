@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/labstack/echo"
-	"github.com/ww24/lirc-web-api/service"
+	"github.com/adamcstephens/lirc-web-api/service"
 )
 
 func apiv1(g *echo.Group) {
