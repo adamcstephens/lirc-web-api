@@ -6,11 +6,11 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/labstack/echo"
-	"github.com/labstack/echo/middleware"
-	"github.com/labstack/gommon/log"
 	"github.com/adamcstephens/lirc-web-api/config"
 	"github.com/adamcstephens/lirc-web-api/lirc"
+	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
+	"github.com/labstack/gommon/log"
 )
 
 var (
@@ -30,14 +30,12 @@ func wrapError(err error) error {
 	}
 }
 
-func init() {
+func main() {
 	flag.BoolVar(&outputAPIVersion, "v", false, "output version")
 	flag.IntVar(&apiPort, "p", 3000, "set API port")
 	flag.StringVar(&frontendPath, "f", "./frontend", "frontend path")
 	flag.Parse()
-}
 
-func main() {
 	if outputAPIVersion {
 		fmt.Println(version)
 		return
