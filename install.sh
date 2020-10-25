@@ -32,7 +32,7 @@ if [ "$OS" = "linux" ] && hash systemctl; then
   sudo rsync -ru $INSTALL_TMP_DIR/frontend $share_dir
   rm -rf $INSTALL_TMP_DIR
 
-  cat <<EOF | sudo tee /lib/systemd/system/lirc-web-api.service
+  cat <<EOF | sudo tee /etc/systemd/system/lirc-web-api.service
 [Unit]
 Description=lirc-web-api
 After=network.target network-online.target

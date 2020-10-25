@@ -8,6 +8,7 @@ import (
 
 	"github.com/adamcstephens/lirc-web-api/config"
 	"github.com/adamcstephens/lirc-web-api/lirc"
+	"github.com/labstack/echo-contrib/prometheus"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"github.com/labstack/gommon/log"
@@ -114,6 +115,10 @@ func main() {
 	apiv1(apiv1g)
 
 	e.Static("/", frontendPath)
+
+	// Enable metrics middleware
+	p := prometheus.NewPrometheus("echo", nil)
+	p.Use(e)
 
 	e.Logger.Fatal(e.Start(":" + strconv.Itoa(apiPort)))
 }
